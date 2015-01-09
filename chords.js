@@ -198,7 +198,7 @@ var middleTextBottom = textCenter.append("text")
 //////////////////////////////////////////////////////////*/
 
 var counter = 1,
-	buttonTexts = ["Continuar","Siguiente","Terminar"],
+	buttonTexts = [">",">","Fin"],
 	opacityValueBase = 0.8,
 	opacityValue = 0.4;
 

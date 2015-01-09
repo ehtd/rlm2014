@@ -7,7 +7,7 @@
 
 		#container {
 			margin: auto;
-			width: 820px
+			width: 700px
 		}
 
 		#clickerWrapper {
@@ -15,7 +15,7 @@
 		  z-index: 1;
 		  display: block;
 		  position: relative;
-		  width: 820px;
+		  width: 700px;
 		  /*padding-top: 5px;*/
 		  visibility: auto;
 		}
@@ -41,7 +41,7 @@
 		  z-index: 1;
 		  display: block;
 		  position: relative;
-		  width: 40%;
+		  width: 37%;
 		  height: 6px;
 		  margin: 10px auto;
 		  visibility: hidden;
@@ -55,7 +55,7 @@
 		  font-weight: 300;
 		  color: #6B6B6B;
 		  position: relative;
-		  width: 820px;
+		  width: 700px;
 		  text-align: center;
 		  margin-top: 30px;	
 		  overflow: hidden;		  
@@ -68,16 +68,9 @@
 			margin: 0 auto;
 		}
 		
-		
-		#skip{
-		  width: 50%;
-		  cursor: pointer;	
-		  float: left;	
-		  text-align: center;
-		}
-		
+
 		#reset{
-		  width: 50%;
+		  width: 100%;
 		  cursor: pointer;	
 		  float: left;
 		  text-align: center;
