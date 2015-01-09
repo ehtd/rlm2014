@@ -178,7 +178,7 @@ var middleTextTop = textCenter.append("text")
 	.attr("y", -24*10/2 + "px")
 	.attr("dy", "1em")
 	.attr("opacity", 1)
-	.text("Para el Reto “LEER MAS” 2014, Inflection Point participa como donador de horas por segunda ocasión.")
+	.text("CLIP")
 	.call(wrap, 350);
 
 /*Starting text middle bottom*/
@@ -189,7 +189,7 @@ var middleTextBottom = textCenter.append("text")
 	.attr("y", 24*3/2 + "px")
 	.attr("dy", "1em")
 	.attr('opacity', 1)
-	.text("La meta: 2000 horas de lectura")
+	.text("2014")
 	.call(wrap, 350);
 
 
@@ -198,8 +198,7 @@ var middleTextBottom = textCenter.append("text")
 //////////////////////////////////////////////////////////*/
 
 var counter = 1,
-	buttonTexts = ["Continuar","Siguiente","Continue","Okay","Go on","Continue","Okay","Continue",
-				   "Continue","Continue","Continue","Continue","Continue","Finish"],
+	buttonTexts = ["Continuar","Siguiente","Terminar"],
 	opacityValueBase = 0.8,
 	opacityValue = 0.4;
 
@@ -234,10 +233,10 @@ function Draw1(){
 	/*Show and run the progressBar*/
 	runProgressBar(time=500*11);
 		
-	changeTopText(newText = "Que es el Reto “LEER MAS”?",
-	loc = 1/2, delayDisappear = 0, delayAppear = 1);
+	changeTopText(newText = "Un año de lectura",
+	loc = 8/2, delayDisappear = 0, delayAppear = 1);
 
-	changeTopText(newText = "“LEER MAS” es el compromiso de la iniciativa privada en México para impulsar el hábito de la lectura entre sus empleados y familias para contribuir a alcanzar una educación de calidad en el país.",
+	changeTopText(newText = "A continuación un breve resumen",
 	loc = 8/2, delayDisappear = 5, delayAppear = 6, finalText = true);
 	
 	changeBottomText(newText = "",
@@ -294,11 +293,11 @@ function Draw2(){
 	  .attr("opacity", function(d, i) {return d.index ? 0 : 1; });
 	  
 	/*Switch  text*/
-	changeTopText(newText = "Iniciamos el mes de Febrero con el donador de horas via Google Forms.",
-	loc = 1/2, delayDisappear = 0, delayAppear = 1, finalText = true);
+	changeTopText(newText = "Se usa oficialmente nuestro Ex Libris. Nuevo donador de horas.",
+	loc = 8/2, delayDisappear = 0, delayAppear = 1, finalText = true);
 	
-	changeBottomText(newText = "",
-	loc = 0/2, delayDisappear = 0, delayAppear = 1)	;
+	changeBottomText(newText = "Fallece García Marquez. Día internacional del Libro",
+	loc = 1/2, delayDisappear = 0, delayAppear = 1)	;
 	
 };/*Draw2*/
 
@@ -310,8 +309,8 @@ function Draw3(){
 
 	/*First disable click event on clicker button*/
 	stopClicker();
-
-	var arcDelay = [0,1,2,12,13,23,33,34,35,40,47,48,49];
+//23
+	var arcDelay = [0,1,2,3,11,17,28,35,36,41,42];
 	/*Show and run the progressBar*/
 	runProgressBar(time=700*(arcDelay[(arcDelay.length-1)]+1));
 
@@ -341,75 +340,50 @@ function Draw3(){
 	.transition().delay(function(d,i) { return 700*arcDelay[i]; }).duration(700)
 	.selectAll("text").style("opacity", 1);
 
-	/*Change the text of the top section inside the circle accordingly*/
-	/*HTC*/
-	changeTopText(newText = "HTC has 5% of the market share",
+	/* Mayo Junio Julio */
+	changeTopText(newText = "Feria de libro usado en el centro de Monterrey",
 		loc = 6/2, delayDisappear = 0, delayAppear = arcDelay[2]);
-	/*LG*/
-	changeTopText(newText = "LG has almost 5% of the market",
-		loc = 6/2, delayDisappear = arcDelay[3], delayAppear = arcDelay[4]);
-	/*Samsung*/
-	changeTopText(newText = "Samsung has the biggest share by far, with 38% of respondents using a Samsung as their main phone",
-		loc = 3/2, delayDisappear = (arcDelay[5]-1), delayAppear = arcDelay[5]);
-	/*Sony*/
-	changeTopText(newText = "Sony has slightly more than 4% share",
-		loc = 4/2, delayDisappear = arcDelay[6], delayAppear = (arcDelay[8]-1));
-	/*100%*/
-	changeTopText(newText = "Together that sums up to 100%",
-		loc = 1/2, delayDisappear = (arcDelay[9]-1), delayAppear = arcDelay[9]);
-	/*Chord intro*/
-	changeTopText(newText = "This circle shows how the respondents are currently divided between the brands",
-		loc = 8/2, delayDisappear = (arcDelay[10]-1), delayAppear = arcDelay[10]);
 
-	/*Change the text of the bottom section inside the circle accordingly*/
-	/*Huawei*/
-	changeBottomText(newText = "Huawei came from practically no share in 2013 to 2.4% in 2014 thereby taking its place in the biggest 7 brands in the Netherlands",
-		loc = -2/2, delayDisappear = 0, delayAppear = arcDelay[2]);
-	/*Nokia*/
-	changeBottomText(newText = "Nokia is still owned by 15% of the respondents. However practically all of these phones are ordinary phones, not smartphones",
-		loc = -1/2, delayDisappear = arcDelay[3], delayAppear = arcDelay[4]);
-	/*Other*/
-	changeBottomText(newText = "Brands combined in \"Other\" are Blackberry, Motorola, Google Nexus and Operator branded",
-		loc = -1/2, delayDisappear = (arcDelay[5]-1), delayAppear = (arcDelay[8]-1));
-	/*Chord intro*/
-	changeBottomText(newText = "Now we're going to look at how these respondents flowed from their previous phone to their present one",
-		loc = 1/2, delayDisappear = (arcDelay[9]-1), delayAppear = arcDelay[10], finalText = true);
+	changeBottomText(newText = "780 horas de lectura donadas durante estos meses",
+		loc = 6/2, delayDisappear = 0, delayAppear = arcDelay[2]);
+
+	/* Agosto */
+	changeTopText(newText = "Alcanzamos 1000 horas de lectura.",
+		loc = 6/2, delayDisappear = arcDelay[4]-1, delayAppear = arcDelay[4]);
+
+	changeBottomText(newText = "",
+		loc = 6/2, delayDisappear = arcDelay[4]-1, delayAppear = arcDelay[4]);
+
+	/* Septiembre */
+	changeTopText(newText = "Segundo aniversario de CLIP.",
+		loc = 6/2, delayDisappear = arcDelay[5]-1, delayAppear = arcDelay[5]);
+
+	changeBottomText(newText = "Primer feria de intercambio y préstamos de libros usados de Inflection Point",
+		loc = 6/2, delayDisappear = arcDelay[5]-1, delayAppear = arcDelay[5]);
+
+	/* Octubre */
+	changeTopText(newText = "Feria Internacional del Libro Monterrey",
+		loc = 6/2, delayDisappear = arcDelay[6]-1, delayAppear = arcDelay[6]);
+
+	changeBottomText(newText = "Feria de Libro usado con trueque de libros",
+		loc = 6/2, delayDisappear = arcDelay[6]-1, delayAppear = arcDelay[6]);
+
+	/* Noviembre Diciembre */
+	changeTopText(newText = "¡Reto “LEER MAS” superado!",
+		loc = 6/2, delayDisappear = arcDelay[7]-1, delayAppear = arcDelay[7]);
+
+	changeBottomText(newText = "Mas de 2250 horas donadas",
+		loc = 6/2, delayDisappear = arcDelay[7]-1, delayAppear = arcDelay[7]);
+
+	/* Enero */
+	changeTopText(newText = "2315 horas totales para el año 2014",
+		loc = 1/2, delayDisappear = (arcDelay[9]-1), delayAppear = arcDelay[9], finalText = true);
+
+	changeBottomText(newText = "",
+		loc = 8/2, delayDisappear = (arcDelay[9]-1), delayAppear = arcDelay[9]);
 
 };/*Draw3*/
 
-
-function Draw14(){
-
-	/*First disable click event on clicker button*/
-	stopClicker();
-	/*Show and run the progressBar*/
-	/*runProgressBar(time=700*2);*/
-
-	changeTopText(newText = "Thank you for staying with me so far! After these examples I think you're absolutely " + 
-							"ready to face the full impact of all chords simultaneously",
-		loc = 8/2, delayDisappear = 0, delayAppear = 1, finalText = true);
-		
-	changeBottomText(newText = "I'm looking forward to hearing about the insights that you have discovered on your own",
-		loc = 3/2, delayDisappear = 0, delayAppear = 1);		
-	
-	/*Only show the chords of Apple*/
-	chords.transition().duration(1000)
-		.style("opacity", 0.1);
-
-	/*Hide all the text*/
-	d3.selectAll("g.group").selectAll("line")
-		.transition().duration(700)
-		.style("stroke","#DBDBDB");
-	/*Same for the %'s*/
-	svg.selectAll("g.group")
-		.transition().duration(700)
-		.selectAll(".tickLabels").style("opacity",0.4);
-	/*And the Names of each Arc*/	
-	svg.selectAll("g.group")
-		.transition().duration(700)
-		.selectAll(".titles").style("opacity",0.4);	
-		
-};/*Draw14*/
 
 /*///////////////////////////////////////////////////////////
 //Draw the original Chord diagram
@@ -426,7 +400,7 @@ function finalChord() {
 		.style("visibility", "hidden");
 	
 	/*Remove texts*/
-	changeTopText(newText = "",
+	changeTopText(newText = "¡Gracias!",
 		loc = 0, delayDisappear = 0, delayAppear = 1);
 	changeBottomText(newText = "",
 		loc = 0, delayDisappear = 0, delayAppear = 1);			
