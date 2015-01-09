@@ -4,26 +4,24 @@
 
 //Original source: http://bl.ocks.org/nbremer/raw/94db779237655907b907/
 
-var NameProvider = ["Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre", "Enero"];
+var NameProvider = ["Abril 2014","Mayo 2014","Junio 2014","Julio 2014","Agosto 2014", "Septiembre 2014", "Octubre 2014", "Noviembre 2014", "Diciembre 2014", "Enero 2015"];
 	
 var matrix = [ //Using chords, using only self data for each month
-[10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-[0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-[0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0],
-[0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0, 0],
-[0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0, 0],
-[0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0, 0],
-[0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0, 0],
-[0, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0],
-[0, 0, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0],
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0, 0],
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0],
-[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10]
+[7.58, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+[0, 7.79, 0, 0, 0, 0, 0, 0, 0, 0],
+[0, 0, 15.43, 0, 0, 0, 0, 0, 0, 0],
+[0, 0, 0, 13.75, 0, 0, 0, 0, 0, 0],
+[0, 0, 0, 0, 13.21, 0, 0, 0, 0, 0],
+[0, 0, 0, 0, 0, 27.55, 0, 0, 0, 0],
+[0, 0, 0, 0, 0, 0, 4.62, 0, 0, 0],
+[0, 0, 0, 0, 0, 0, 0, 2.59, 0, 0],
+[0, 0, 0, 0, 0, 0, 0, 0, 6.39, 0],
+[0, 0, 0, 0, 0, 0, 0, 0, 0, 1.07]
 ];
 
 /*Sums up to exactly 100*/
 
-var colors = ["#C4C4C4","#69B40F","#EC1D25","#C8125C","#008FC8","#10218B","#134B24","#737373","#C4C4C4","#69B40F","#EC1D25","#C8125C"];
+var colors = ["#C4C4C4","#69B40F","#EC1D25","#C8125C","#008FC8","#10218B","#134B24","#737373","##C8125C","#C8125C","#EC1D25","#C8125C"];
 
 /*Initiate the color scale*/
 var fill = d3.scale.ordinal()
@@ -34,16 +32,16 @@ var fill = d3.scale.ordinal()
 /////////////// Initiate Chord Diagram /////////////////////
 //////////////////////////////////////////////////////////*/
 
-var width = 500,
-    height = 600,
-	hPad = 20,
+var width = 700,
+    height = 500,
+	hPad = 100,
     innerRadius = Math.min(width, height) * .39,
     outerRadius = innerRadius * 1.04;
 
 /*Initiate the SVG*/
 var svg = d3.select("#chart").append("svg:svg")
     .attr("width", width+0)
-    .attr("height", height+20)
+    .attr("height", height+200)
 	.append("svg:g")
     .attr("transform", "translate(" + width / 2 + "," + (height / 2 + hPad) + ")");
 
@@ -442,7 +440,7 @@ function finalChord() {
 		  .style("opacity", 0)
 		  .transition().duration(1000)
 		  .style("opacity", 1);
-		  
+
 	} else {
 		 /*Make all arc visible*/
 		svg.selectAll("g.group").select("path")
@@ -455,9 +453,9 @@ function finalChord() {
 		.on("mouseover", fade(.02))
 		.on("mouseout", fade(.80));
 		
-	/*Show all chords*/
-	chords.transition().duration(1000)
-		.style("opacity", opacityValueBase);
+	/*Do not show all chords*/
+	//chords.transition().duration(1000)
+	//	.style("opacity", opacityValueBase);
 
 	/*Show all the text*/
 	d3.selectAll("g.group").selectAll("line")
